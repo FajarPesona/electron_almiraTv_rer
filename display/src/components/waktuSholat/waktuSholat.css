@@ -1,0 +1,46 @@
+.divWs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 10px;
+}
+
+.ws {
+  border-radius: 10px;
+  display: flex;
+  font-size: 38px;
+  padding: 8px;
+  width: 90%;
+  color: azure;
+  justify-content: space-between;
+}
+
+.ws > span {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.Subuh {
+  background-color: darkgreen;
+}
+
+.Syuruq {
+  background-color: darkolivegreen;
+}
+
+.Dzuhur {
+  background-color: darkmagenta;
+}
+
+.Maghrib {
+  background-color: darkslateblue;
+}
+
+.Ashar {
+  background-color: blueviolet;
+}
+
+.Isya {
+  background-color: darkslategray;
+}

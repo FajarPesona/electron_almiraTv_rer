@@ -1,0 +1,83 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  /* margin-bottom: 10px; */
+}
+
+.head1 {
+  flex: 5;
+  /* background-color: brown; */
+}
+.head2 {
+  flex: 5;
+  /* background-color: brown; */
+  text-align: center;
+  padding: 10px;
+}
+.head3 {
+  flex: 5;
+  /* background-color: brown; */
+  padding: 10px;
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 10px;
+}
+
+.labelWs {
+  flex: 4;
+}
+
+.selectDurasi {
+  flex: 5;
+}
+
+.selectTrack {
+  flex: 5;
+}
+
+.playdiv {
+  /* flex: 1; */
+  display: flex;
+  /* background-color: brown; */
+  justify-content: end;
+}
+
+.iplay {
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  height: 12px;
+  width: 12px;
+  text-align: center;
+}
+
+.green {
+  background-color: rgb(35, 168, 17);
+}
+
+.red {
+  background-color: red;
+}
+
+/* .none {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  height: 12px;
+  width: 12px;
+  background-color: red;
+} */

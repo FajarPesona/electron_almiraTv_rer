@@ -1,0 +1,18 @@
+.containerSetTime {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.divSetDate,
+.divSetTime {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.divSetDate > input,
+.divSetTime > input {
+  flex: 1;
+}

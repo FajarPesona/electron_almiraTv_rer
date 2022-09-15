@@ -1,0 +1,13 @@
+.label-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-input > span {
+  flex: 1;
+}
+
+.label-input > input {
+  flex: 3;
+}
