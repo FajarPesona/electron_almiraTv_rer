@@ -6,6 +6,7 @@ import { useEffect } from "react";
 // import "./setTime.css";
 import { useNavigate } from "react-router-dom";
 import { postDate, postDateTime, postTime } from "../../api/api";
+import ButtonHome from "../../components/ButtonHome";
 import getTime from "../../utils/getTime";
 // import axios from "axios";
 // import { baseURL } from "../../utils/data";
@@ -94,7 +95,8 @@ const SetTime = () => {
       </div>
 
       <button onClick={sinkronkanDateTime}>Sinkronkan dengan HP</button>
-      <button onClick={() => navigate("/")}>Home</button>
+      <ButtonHome />
+      {/* <button onClick={() => navigate("/")}>Home</button> */}
     </div>
   );
 };

@@ -13,6 +13,7 @@ import {
 const baseURL = "http://192.168.1.2:5000/setting/";
 // const baseURL = "http://localhost:5000/setting/";
 // const baseURL = "http://localhost:5000/setting/";
+// const baseURL = "setting/";
 
 const test = () => {
   axios.post(baseURL + "test", { msg: "hello" }).then((response) => {
@@ -134,13 +135,26 @@ const postDateTime = (date, time) => {
 
 const playMp3 = (track) => {
   console.log("play");
-  axios.post(baseURL + "/play", { track }).then((response) => {
+  axios.post(baseURL + "play", { track }).then((response) => {
     console.log(response.data);
   });
 };
 
 const StopMp3 = () => {
-  axios.post(baseURL + "/stop").then((response) => {
+  axios.post(baseURL + "stop").then((response) => {
+    console.log(response.data);
+  });
+};
+
+const playMurottal = (track) => {
+  console.log("play murottal");
+  axios.post(baseURL + "playMurottal", { track }).then((response) => {
+    console.log(response.data);
+  });
+};
+
+const stopMurottal = () => {
+  axios.post(baseURL + "/stopMurottal").then((response) => {
     console.log(response.data);
   });
 };
@@ -167,4 +181,6 @@ export {
   postDateTime,
   playMp3,
   StopMp3,
+  playMurottal,
+  stopMurottal,
 };

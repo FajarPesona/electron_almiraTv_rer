@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TextareaAutosize from "react-textarea-autosize";
 import { getRuntext, postRuntext } from "../../api/api";
+import ButtonHome from "../../components/ButtonHome";
 // import { baseURL } from "../../utils/data";
 import "./runtext.css";
 // import axios from "axios";
@@ -52,7 +53,8 @@ const Runtext = () => {
         })}
       </div>
       <button onClick={sendRuntext}>Kirim</button>
-      <button onClick={() => navigate("/")}>Home</button>
+      <ButtonHome />
+      {/* <button onClick={() => navigate("/")}>Home</button> */}
     </div>
   );
 };

@@ -8,10 +8,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { AppContext } from "../../context/AppProvider";
 import { getKota, postKota } from "../../api/api";
+import ButtonHome from "../../components/ButtonHome";
 // import { baseURL } from "../../utils/data";
 
 const SetKota = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   // const { baseURL } = useContext(AppContext);
   const [kota, setKota] = useState({});
 
@@ -108,7 +109,8 @@ const SetKota = () => {
       </div>
 
       <button onClick={sendKota}>Kirim</button>
-      <button onClick={() => navigate("/")}>Home</button>
+      <ButtonHome />
+      {/* <button onClick={() => navigate("/setting")}>Home</button> */}
     </div>
   );
 };

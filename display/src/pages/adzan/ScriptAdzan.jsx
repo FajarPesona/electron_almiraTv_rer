@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { AppContext } from "../../context/AppProvider";
 import { useNavigate } from "react-router-dom";
 import { getTime } from "../../utils/time";
+import { audioPath } from "../../utils/paths";
 
 const wsName = [
   "Imsak",
@@ -49,7 +50,7 @@ const ScriptAdzan = ({ setStrAdzan, setTime, setTik }) => {
           console.log(0);
           state = 1;
           if (dataAdzan[indexAdzan].useMp3) {
-            audioAdzan.src = "assets/audio/" + dataAdzan[indexAdzan].track;
+            audioAdzan.src = audioPath + dataAdzan[indexAdzan].track;
             audioAdzan.play();
             state = 2;
           }

@@ -1,33 +1,51 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
+// const { SerialPort } = require("serialport");
 
 const settingRouter = require("./routes/settingRoutes");
 const displayRouter = require("./routes/displayRoutes");
 
-const { displayPath, settingPath } = require("../paths");
+const { displayPath, settingPath, passFile } = require("../paths");
 const { eventsHandler } = require("./controllers/settingController");
 
-const server = express();
+// const x = "081.mp3";
+// console.log(("00" + (parseInt(x.substring(0, 3)) + 1)).slice(-3) + ".mp3");
+// console.log(parseInt(x.substring(0, 3)) + 1);
 
-server.use(cors());
-server.use(morgan("tiny"));
-server.use(express.json());
-server.use(express.urlencoded({ extended: true }));
+// Create a port
+// const port = new SerialPort({
+//   path: "/dev/tty-usbserial1",
+//   baudRate: 57600,
+// });
 
-server.use(express.static(displayPath));
-server.use(express.static(settingPath));
+const result = require(passFile);
+if (result.pass === "123abc567") {
+  console.log("pass");
+  const server = express();
 
-server.use("/setting", settingRouter);
-server.use("/display", displayRouter);
-server.get("/events", eventsHandler);
+  server.use(cors());
+  server.use(morgan("tiny"));
+  server.use(express.json());
+  server.use(express.urlencoded({ extended: true }));
 
-server.listen(5000, () => {
-  console.log("server running");
-});
+  server.use(express.static(displayPath));
+  server.use(express.static(settingPath));
 
-module.exports = server;
+  server.get("/home", (req, res) => {
+    // res.send("ljfd");
+    res.sendFile("index.html", { root: settingPath });
+  });
+  server.use("/setting", settingRouter);
+  server.use("/display", displayRouter);
+  server.get("/events", eventsHandler);
 
+  server.listen(5000, () => {
+    console.log("server running");
+  });
+
+  module.exports = server;
+}
 // const path = require("path");
 // const { eventsHandler } = require("./see/see");
 

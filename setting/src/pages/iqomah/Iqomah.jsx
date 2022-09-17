@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getDataIqomah, postDataIqomah } from "../../api/api";
 import { iWs, labelsWs } from "../../api/defaultData";
+import ButtonHome from "../../components/ButtonHome";
 import Select from "../../components/select/Select";
 // // import { useContext } from "react";
 // // import Select from "react-select";
@@ -64,7 +65,8 @@ const Iqomah = () => {
 
       {/* <br /> */}
       <button onClick={sendIqomah}>Kirim</button>
-      <button onClick={() => navigate("/")}>Home</button>
+      <ButtonHome />
+      {/* <button onClick={() => navigate("/")}>Home</button> */}
     </div>
   );
 };

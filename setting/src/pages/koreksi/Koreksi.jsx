@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getKoreksi, postKoreksi } from "../../api/api";
 import { iWs, labelsWs } from "../../api/defaultData";
+import ButtonHome from "../../components/ButtonHome";
 import Select from "../../components/select/Select";
 // import { baseURL, iWs, labelsWs } from "../../utils/data";
 // import "./koreksi.css";
@@ -71,7 +72,8 @@ const Koreksi = () => {
         })}
       </div>
       <button onClick={sendKoreksi}>Kirim</button>
-      <button onClick={() => navigate("/")}>Home</button>
+      <ButtonHome />
+      {/* <button onClick={() => navigate("/")}>Home</button> */}
     </div>
   );
 };

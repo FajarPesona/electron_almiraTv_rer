@@ -11,6 +11,8 @@ const event = {
   setDate: 2,
   playMp3: 3,
   stopMp3: 4,
+  playMurottal: 5,
+  stopMurottal: 6,
   // setKota: 1,
   // setRuntext: 2,
 };
@@ -43,6 +45,7 @@ function eventsHandler(req, res, next) {
 
 const renderSettingUi = (req, res) => {
   res.sendFile("index.html", { root: settingPath });
+  // res.send("ok");
 };
 
 const getAllData = async (req, res) => {
@@ -120,6 +123,19 @@ const stopMp3 = async (req, res) => {
   see(event.stopMp3, {});
 };
 
+const playMurottal = async (req, res) => {
+  const val = req.body;
+  console.log(val);
+  see(event.playMurottal, val);
+  res.send("ok");
+};
+
+const stopMurottal = async (req, res) => {
+  console.log("stop");
+  res.send("ok");
+  see(event.stopMurottal, {});
+};
+
 const setTime = async (req, res) => {
   const time = req.body;
   console.log("setting time:", time);
@@ -173,6 +189,8 @@ module.exports = {
   setDateTime,
   playMp3,
   stopMp3,
+  playMurottal,
+  stopMurottal,
   test,
 };
 

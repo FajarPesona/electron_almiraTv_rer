@@ -6,6 +6,7 @@ import { getHijriyah } from "../../utils/hijriyah";
 // import { cekTarhim } from "../../utils/tarhim";
 import { getTime } from "../../utils/time";
 import { useNavigate } from "react-router-dom";
+import { audioPath } from "../../utils/paths";
 
 const stateEnum = {
   idle: 0,
@@ -59,7 +60,7 @@ const HomeScript = () => {
     if (i && dataTarhim[i].durasi > 0) {
       context.setIndexTarhim(i);
       console.log("boom", context.indexTarhim);
-      audioTarhim.src = "assets/audio/" + context.allData.dataTarhim[i].track;
+      audioTarhim.src = audioPath + context.allData.dataTarhim[i].track;
       audioTarhim.play();
       state = stateEnum.tarhim;
     }

@@ -1,32 +1,11 @@
-// const { dataTarhim } = require("../data");
-// let fSelesaiTarhim = false;
-
-// import path from "path";
-
-let audioFolder = "F:/audio/almira_single/mp3/";
+import { audioPath } from "./paths";
 
 let audio = new Audio();
-audio.onended = () => {
-  console.log("selesai");
-  //   fSelesaiTarhim = true;
-};
+audio.onended = () => console.log("selesai");
 
 async function playMp3(track) {
   console.log("play");
-  // audio.type = "audio/mp3";
-  // audio.src = audioFolder + track;
-  audio.src = "assets/audio/" + track;
-
-  // try {
-  //   await audio.play();
-  //   console.log("Playing...");
-  // } catch (err) {
-  //   console.log("Failed to play..." + err);
-  // }
-
-  // audio.src = audioFolder + "0001.mp3";
-  //   audio.src = path.resolve(dataTarhim[i].track);
-  // audio.src = "../../../public/assets/audio/338.mp3";
+  audio.src = audioPath + track;
   audio.play();
 }
 
@@ -35,7 +14,30 @@ function stopMp3() {
   audio.pause();
 }
 
-export { playMp3, stopMp3, audioFolder };
+export { playMp3, stopMp3 };
+
+// export { playMp3, stopMp3, audioFolder };
+
+// const { dataTarhim } = require("../data");
+// let fSelesaiTarhim = false;
+
+// import path from "path";
+// let audioFolder = "F:/audio/almira_single/mp3/";
+
+// audio.type = "audio/mp3";
+// audio.src = audioFolder + track;
+// audio.src = "assets/audio/" + track;
+
+// try {
+//   await audio.play();
+//   console.log("Playing...");
+// } catch (err) {
+//   console.log("Failed to play..." + err);
+// }
+
+// audio.src = audioFolder + "0001.mp3";
+//   audio.src = path.resolve(dataTarhim[i].track);
+// audio.src = "../../../public/assets/audio/338.mp3";
 
 // function playTarhim(i) {
 //   console.log("play");

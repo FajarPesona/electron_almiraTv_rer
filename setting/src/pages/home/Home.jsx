@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 // import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
+import MurottalPlayer from "../../components/murottalPlayer/MurottalPlayer";
 // import { baseURL } from "../../utils/data";
 import "./home.css";
 // import { useContext } from "react";
@@ -28,12 +29,15 @@ const Home = () => {
       <button onClick={() => navigate("/koreksi")}>Set Koreksi</button>
       <button onClick={() => navigate("/info")}>Set Info</button>
       <button onClick={() => navigate("/time")}>Set Time</button>
+
+      {/* <MurottalPlayer /> */}
       <button
         onClick={() => {
           console.log("getAll");
           // axios.get("https://www.google.com");
 
-          axios.get("http://192.168.1.5:5000/setting");
+          // axios.get("http://192.168.4.1/relayOn");
+          axios.get("http://192.168.1.4/relayOn");
         }}
       >
         Get All

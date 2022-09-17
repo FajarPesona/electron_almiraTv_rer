@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { baseURL } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
 import { getInfo, postInfo } from "../../api/api";
+import ButtonHome from "../../components/ButtonHome";
 // import axios from "axios";
 import "./info.css";
 
@@ -113,7 +114,8 @@ const Info = () => {
         />
       </div>
       <button onClick={sendInfo}>Kirim</button>
-      <button onClick={() => navigate("/")}>Home</button>
+      <ButtonHome />
+      {/* <button onClick={() => navigate("/")}>Home</button> */}
     </div>
   );
 };

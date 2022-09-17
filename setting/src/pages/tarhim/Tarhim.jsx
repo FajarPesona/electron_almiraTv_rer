@@ -6,6 +6,7 @@ import Select from "../../components/select/Select";
 import { FaStop, FaPlay } from "react-icons/fa";
 import { useEffect } from "react";
 import { getDataTarhim, playMp3, postDataTarhim, StopMp3 } from "../../api/api";
+import ButtonHome from "../../components/ButtonHome";
 
 // import axios from "axios";
 // import { baseURL, iWs, labelsWs } from "../../utils/data";
@@ -22,10 +23,18 @@ const Tarhim = () => {
     return { val: x, lbl: x };
   });
 
-  const optionsTrack = Array.from({ length: 90 }, (_, x) => {
+  // const optionsTrack = Array.from({ length: 90 }, (_, x) => {
+  //   return {
+  //     val: String(x).padStart(4, "0") + ".mp3",
+  //     lbl: String(x).padStart(4, "0") + ".mp3",
+  //   };
+  // });
+
+  const optionsTrack = Array.from({ length: 89 }, (_, x) => {
+    x = x + 1;
     return {
-      val: String(x).padStart(4, "0") + ".mp3",
-      lbl: String(x).padStart(4, "0") + ".mp3",
+      val: ("00" + x).slice(-3) + ".mp3",
+      lbl: ("00" + x).slice(-3) + ".mp3",
     };
   });
 
@@ -126,7 +135,8 @@ const Tarhim = () => {
       </div>
 
       <button onClick={sendTarhim}>Kirim</button>
-      <button onClick={() => navigate("/")}>Home</button>
+      <ButtonHome />
+      {/* <button onClick={() => navigate("/")}>Home</button> */}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { playMp3, stopMp3 } from "./playMp3";
+import { playMurottal, stopMurottal } from "./playMurottal";
 import { getPrayerTimes } from "./prayertime";
 import getTarhimTimes from "./tarhimtime";
 
@@ -17,6 +18,8 @@ const event = {
   setDate: 2,
   playMp3: 3,
   stopMp3: 4,
+  playMurottal: 5,
+  stopMurottal: 6,
 };
 
 let allData = null;
@@ -27,7 +30,7 @@ let allData = null;
 // let dataTarhim;
 
 const eventHandle = (data, context) => {
-  let prayerTimes, tarhimTimes;
+  let prayerTimes, tarhimTimes, track, folder;
   switch (data.event) {
     case event.allData:
       // console.log(data.val);
@@ -61,12 +64,21 @@ const eventHandle = (data, context) => {
       break;
     case event.playMp3:
       console.log(data.val);
-      let track = data.val;
+      track = data.val;
       playMp3(track);
       break;
     case event.stopMp3:
       console.log(1);
       stopMp3();
+      break;
+    case event.playMurottal:
+      console.log(data.val);
+      track = data.val.track;
+      playMurottal(track);
+      break;
+    case event.stopMurottal:
+      console.log(1);
+      stopMurottal();
       break;
   }
 };

@@ -6,6 +6,7 @@ import { FaStop, FaPlay } from "react-icons/fa";
 
 import "./adzan.css";
 import { getDataAdzan, playMp3, postDataAdzan, StopMp3 } from "../../api/api";
+import ButtonHome from "../../components/ButtonHome";
 // import axios from "axios";
 // import { baseURL, iWs, labelsWs } from "../../utils/data";
 // import { FaStop, FaPlay } from "react-icons/fa";
@@ -20,8 +21,8 @@ const Adzan = () => {
   });
   const optionsTrack = Array.from({ length: 5 }, (_, x) => {
     return {
-      val: ("009" + x).slice(-4) + ".mp3",
-      lbl: ("009" + x).slice(-4) + ".mp3",
+      val: ("09" + x).slice(-3) + ".mp3",
+      lbl: ("09" + x).slice(-3) + ".mp3",
     };
   });
 
@@ -138,7 +139,8 @@ const Adzan = () => {
       </div>
 
       <button onClick={sendAdzan}>Kirim</button>
-      <button onClick={() => navigate("/")}>Home</button>
+      <ButtonHome />
+      {/* <button onClick={() => navigate("/")}>Home</button> */}
     </div>
   );
 };

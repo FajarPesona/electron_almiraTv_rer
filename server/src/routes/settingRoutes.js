@@ -14,6 +14,8 @@ const {
   playMp3,
   stopMp3,
   setDateTime,
+  playMurottal,
+  stopMurottal,
 } = require("../controllers/settingController");
 
 const router = require("express").Router();
@@ -45,6 +47,10 @@ router.post("/datetime", setDateTime);
 router.post("/play", playMp3);
 
 router.post("/stop", stopMp3);
+
+router.post("/playMurottal", playMurottal);
+
+router.post("/stopMurottal", stopMurottal);
 
 router.post("/test", test);
 
