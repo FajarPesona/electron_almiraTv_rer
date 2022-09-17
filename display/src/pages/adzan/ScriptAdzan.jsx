@@ -19,7 +19,7 @@ const ScriptAdzan = ({ setStrAdzan, setTime, setTik }) => {
   const navigate = useNavigate();
 
   const { context } = useContext(AppContext);
-  let adzanTim;
+  let adzanInterval;
   let indexAdzan = context.indexTarhim;
   let dataAdzan = context.allData.dataAdzan;
   let state = 0;
@@ -32,14 +32,14 @@ const ScriptAdzan = ({ setStrAdzan, setTime, setTik }) => {
 
   function selesaiAdzan() {
     console.log("selesai adzan");
-    clearInterval(adzanTim);
+    clearInterval(adzanInterval);
     navigate("/iqomah");
   }
 
   useEffect(() => {
     console.log(1);
-    setStrAdzan("Adzan " + wsName[indexAdzan]);
-    adzanTim = setInterval(() => {
+    setStrAdzan(wsName[indexAdzan]);
+    adzanInterval = setInterval(() => {
       let t = getTime({ withSec: true });
       tik = !tik;
       setTime(t);
@@ -62,6 +62,7 @@ const ScriptAdzan = ({ setStrAdzan, setTime, setTik }) => {
           break;
       }
     }, 1000);
+    return () => clearInterval(adzanInterval);
   }, []);
   return <></>;
 };

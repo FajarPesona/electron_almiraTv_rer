@@ -46,6 +46,7 @@ const renderSettingUi = (req, res) => {
 };
 
 const getAllData = async (req, res) => {
+  console.log("getAllData");
   console.log(allData);
   res.json(allData);
 };
@@ -98,6 +99,7 @@ const setKoreksi = async (req, res) => {
 };
 
 const setInfo = async (req, res) => {
+  console.log("setInfo");
   allData.info = req.body;
   saveAndSend(res);
   // console.log(allData.info);

@@ -83,7 +83,7 @@ const HomeScript = () => {
       context.setStrTglM(time.strDateM);
       context.setStrTglH(getHijriyah(new Date(), 0).strHijriyah);
       //   console.log(context.allData.kota);
-      console.log(context.indexTarhim);
+      // console.log(context.indexTarhim);
       switch (state) {
         case stateEnum.idle:
           confirmTarhim(time, context.tarhimTimes, context.allData.dataTarhim);

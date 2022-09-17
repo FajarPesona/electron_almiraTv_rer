@@ -1,6 +1,12 @@
 .marqueeHome {
+  position: absolute;
+  top: 87%;
+  height: 13%;
   color: red;
   font-size: 80px;
+  /* background-color: blueviolet; */
+  display: flex;
+  align-items: center;
 }
 
 .marqtext {

@@ -38,14 +38,12 @@ const Home1 = () => {
   return (
     <div className="display-flex-column full-height">
       <HomeScript />
-      {/* <div className="divHome1"> */}
+
       <Header1 />
+
       <div className="contentHome1">
-        <DynamicDiv divClass="flex-3 border-red" />
+        <DynamicDiv divClass="border-red" />
         <div className="content-right">
-          {/* <span className="strKota display-flex flex-center">
-            {context.allData.kota ? context.allData.kota.nama : ""}
-          </span> */}
           <span className="strHari display-flex flex-center">
             {context.allData.kota ? context.allData.kota.nama : ""}, {"  "}
             {context.strHari}
@@ -53,7 +51,6 @@ const Home1 = () => {
           <span className="strTgl display-flex flex-center">
             {context.strTglM} / {context.strTglH}
           </span>
-
           <WaktuSholat
             prayerTimes={context.prayerTimes}
             divClass="display-flex-column"
@@ -61,10 +58,10 @@ const Home1 = () => {
           />
         </div>
       </div>
+
       <RuntextHome
-        // divClass="runtext1"
         runtext={context.allData.runtext}
-        divClass="runtext1 display-flex border-green"
+        divClass="runtext1 display-flex"
       />
       {/* <span>{context.strTglH}</span> */}
       {/* <JamDigital setClock={setClock} /> */}

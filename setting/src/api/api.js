@@ -10,8 +10,9 @@ import {
 } from "./defaultData";
 
 // const baseURL = "http://192.168.1.4:5000/setting/";
-// const baseURL = "http://192.168.1.4:5000/setting/";
-const baseURL = "http://localhost:5000/setting/";
+const baseURL = "http://192.168.1.2:5000/setting/";
+// const baseURL = "http://localhost:5000/setting/";
+// const baseURL = "http://localhost:5000/setting/";
 
 const test = () => {
   axios.post(baseURL + "test", { msg: "hello" }).then((response) => {
@@ -100,6 +101,7 @@ const postKoreksi = (koreksi) => {
 };
 
 const getInfo = async () => {
+  console.log(1);
   return await axios.get(baseURL + "all").then((response) => {
     return response.data.info ? response.data.info : defaultInfo;
   });

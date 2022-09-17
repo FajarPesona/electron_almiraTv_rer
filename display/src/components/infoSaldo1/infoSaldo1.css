@@ -1,0 +1,66 @@
+.saldoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  height: 90%;
+  /* font-family: "Ubuntu", sans-serif; */
+  border: 1px solid wheat;
+  padding: 10px;
+  background-color: black;
+}
+
+.divTitleSaldo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: darkblue;
+  padding: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.titleSaldo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: darkblue;
+  padding: 10px;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.divKeteranganSaldo {
+  color: white;
+  font-size: 28px;
+  display: flex;
+  /* background-color: aqua; */
+}
+
+.keteranganSaldo {
+  flex: 1;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.divTerimakasih {
+  margin-top: 39px;
+  color: white;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* line-height: 10px; */
+  justify-content: center;
+  font-size: 28px;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  color: darkorange;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.Terimakasih {
+  font-family: "Ubuntu", sans-serif;
+}

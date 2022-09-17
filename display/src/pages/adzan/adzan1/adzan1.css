@@ -1,0 +1,65 @@
+.containerImage {
+  position: fixed;
+  width: 100%;
+  height: 70%;
+  top: 0;
+}
+
+.containerImage > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.containertextAdzan {
+  position: fixed;
+  width: 100%;
+  height: 15%;
+  top: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  /* border: 1px solid red; */
+}
+
+.textAdzan {
+  width: 70%;
+  font-size: 90px;
+  font-family: "Ubuntu", sans-serif;
+  color: darkturquoise;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jam {
+  font-size: 90px;
+  color: yellow;
+  margin-right: 50px;
+}
+
+.hour,
+.tik,
+.minute {
+  font-family: "Orbitron", sans-serif;
+}
+
+.containerRuntextAdzan {
+  width: 100%;
+  height: 15%;
+  top: 85%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marqueeAdzan {
+  color: red;
+  font-size: 90px;
+}
+
+.marqueeAdzan > span {
+  font-family: "Russo One", sans-serif;
+}

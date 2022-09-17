@@ -1,5 +1,10 @@
 .contentHome1 {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 67%;
   display: flex;
+  /* background-color: blueviolet; */
 }
 
 .strHari,
@@ -23,8 +28,8 @@
   display: flex;
   flex-direction: column;
   flex: 2;
-  padding: 10px;
-  background-color: black;
+  /* padding: 10px; */
+  /* background-color: blue; */
 }
 
 .runtext1 {

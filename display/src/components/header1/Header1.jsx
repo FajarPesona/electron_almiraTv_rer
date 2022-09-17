@@ -8,7 +8,7 @@ const Header1 = () => {
   // console.log("context", context.allData.info);
   return (
     <div className="header1">
-      <div className="divInfo flex-center border-red">
+      <div className="divInfo flex-center">
         <span className="nama">
           {context.allData.info ? context.allData.info.nama : ""}
         </span>
@@ -16,7 +16,7 @@ const Header1 = () => {
           {context.allData.info ? context.allData.info.alamat : ""}
         </span>
       </div>
-      <span className="spanJam flex-center border-green">{context.strJam}</span>
+      <span className="spanJam">{context.strJam}</span>
     </div>
   );
 };

@@ -3,7 +3,8 @@ import { getPrayerTimes } from "./prayertime";
 import getTarhimTimes from "./tarhimtime";
 
 // const serverUrl = "http://192.168.1.4:5000/events";
-const serverUrl = "http://localhost:5000/events";
+// const serverUrl = "http://localhost:5000/events";
+const serverUrl = "http://192.168.1.2:5000/events";
 
 // const event = {
 //   allData: 0,
